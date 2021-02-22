@@ -9,21 +9,24 @@
 /* Begin PBXBuildFile section */
 		79160D6D25E44424006372C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160D6C25E44424006372C9 /* AppDelegate.swift */; };
 		79160D6F25E44424006372C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160D6E25E44424006372C9 /* SceneDelegate.swift */; };
-		79160D7125E44424006372C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160D7025E44424006372C9 /* ViewController.swift */; };
 		79160D7425E44424006372C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79160D7225E44424006372C9 /* Main.storyboard */; };
 		79160D7625E44426006372C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79160D7525E44426006372C9 /* Assets.xcassets */; };
 		79160D7925E44426006372C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79160D7725E44426006372C9 /* LaunchScreen.storyboard */; };
+		79160D8625E4446E006372C9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160D8525E4446E006372C9 /* Player.swift */; };
+		79160D8D25E4449A006372C9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79160D8C25E4449A006372C9 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		79160D6925E44424006372C9 /* SK8NAYSH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SK8NAYSH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79160D6C25E44424006372C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79160D6E25E44424006372C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		79160D7025E44424006372C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		79160D7325E44424006372C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79160D7525E44426006372C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79160D7825E44426006372C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79160D7A25E44426006372C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79160D8525E4446E006372C9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		79160D8925E44495006372C9 /* SK8NAYSH.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SK8NAYSH.entitlements; sourceTree = "<group>"; };
+		79160D8C25E4449A006372C9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79160D8D25E4449A006372C9 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +46,7 @@
 			children = (
 				79160D6B25E44424006372C9 /* SK8NAYSH */,
 				79160D6A25E44424006372C9 /* Products */,
+				79160D8B25E4449A006372C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +61,40 @@
 		79160D6B25E44424006372C9 /* SK8NAYSH */ = {
 			isa = PBXGroup;
 			children = (
+				79160D8925E44495006372C9 /* SK8NAYSH.entitlements */,
+				79160D8425E44467006372C9 /* Models */,
+				79160D8125E44439006372C9 /* Resources */,
+			);
+			path = SK8NAYSH;
+			sourceTree = "<group>";
+		};
+		79160D8125E44439006372C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				79160D6C25E44424006372C9 /* AppDelegate.swift */,
 				79160D6E25E44424006372C9 /* SceneDelegate.swift */,
-				79160D7025E44424006372C9 /* ViewController.swift */,
 				79160D7225E44424006372C9 /* Main.storyboard */,
 				79160D7525E44426006372C9 /* Assets.xcassets */,
 				79160D7725E44426006372C9 /* LaunchScreen.storyboard */,
 				79160D7A25E44426006372C9 /* Info.plist */,
 			);
-			path = SK8NAYSH;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		79160D8425E44467006372C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				79160D8525E4446E006372C9 /* Player.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		79160D8B25E4449A006372C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79160D8C25E4449A006372C9 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79160D7125E44424006372C9 /* ViewController.swift in Sources */,
 				79160D6D25E44424006372C9 /* AppDelegate.swift in Sources */,
+				79160D8625E4446E006372C9 /* Player.swift in Sources */,
 				79160D6F25E44424006372C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,9 +316,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SK8NAYSH/SK8NAYSH.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VVA7JF63G;
-				INFOPLIST_FILE = SK8NAYSH/Info.plist;
+				INFOPLIST_FILE = SK8NAYSH/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,9 +336,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SK8NAYSH/SK8NAYSH.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VVA7JF63G;
-				INFOPLIST_FILE = SK8NAYSH/Info.plist;
+				INFOPLIST_FILE = SK8NAYSH/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
