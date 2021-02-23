@@ -9,19 +9,16 @@ import CloudKit
 import UIKit
 
 struct PlayerStrings {
-    
     static let recordTypeKey = "Player"
-    static let applePlayerRef = "applePlayerRef"
+    static let applePlayerReferenceKey = "applePlayerReference"
     fileprivate static let usernameKey = "username"
     fileprivate static let photoAssetKey = "photoAsset"
-    
 } // END OF STRUCT
 
 class Player {
-    
     var username: String
     var recordID: CKRecord.ID
-    var applePlayerRef: CKRecord.Reference
+    var applePlayerReference: CKRecord.Reference
     var photoData: Data?
     
     var profilePhoto: UIImage? {
@@ -32,6 +29,7 @@ class Player {
             photoData = newValue?.jpegData(compressionQuality: 0.5)
         }
     }
+    
     var photoAsset: CKAsset {
         get {
           
@@ -48,22 +46,20 @@ class Player {
         }
     }
     
-    init(username: String, recordID: CKRecord.ID = CKRecord.ID.init(recordName:UUID().uuidString), applePlayerRef: CKRecord.Reference, profilePhoto: UIImage? = nil) {
+    init(username: String, recordID: CKRecord.ID = CKRecord.ID.init(recordName:UUID().uuidString), applePlayerReference: CKRecord.Reference, profilePhoto: UIImage? = nil) {
         self.username = username
         self.recordID = recordID
-        self.applePlayerRef = applePlayerRef
+        self.applePlayerReference = applePlayerReference
         self.profilePhoto = profilePhoto
     }
-    
 } // END OF CLASS
 
 // MARK: - Extensions
 
 extension Player {
-    
     convenience init?(ckRecord: CKRecord) {
         guard let username = ckRecord[PlayerStrings.usernameKey] as? String,
-              let applePlayerRef = ckRecord[PlayerStrings.applePlayerRef] as? CKRecord.Reference else { return nil }
+              let applePlayerReference = ckRecord[PlayerStrings.applePlayerReferenceKey] as? CKRecord.Reference else { return nil }
         
         var foundPhoto: UIImage?
         
@@ -76,9 +72,8 @@ extension Player {
             }
         }
         
-        self.init(username: username, recordID: ckRecord.recordID, applePlayerRef: applePlayerRef, profilePhoto: foundPhoto)
+        self.init(username: username, recordID: ckRecord.recordID, applePlayerReference: applePlayerReference, profilePhoto: foundPhoto)
     }
-    
 } // END OF EXTENSION
 
 extension Player: Equatable {
@@ -90,15 +85,13 @@ extension Player: Equatable {
 } // END OF EXTENSION
 
 extension CKRecord {
-    
     convenience init(player: Player) {
         self.init(recordType: PlayerStrings.recordTypeKey, recordID: player.recordID)
         
         setValuesForKeys([
             PlayerStrings.usernameKey : player.username,
-            PlayerStrings.applePlayerRef : player.applePlayerRef,
+            PlayerStrings.applePlayerReferenceKey : player.applePlayerReference,
             PlayerStrings.photoAssetKey : player.photoAsset
         ])
     }
-    
 } // END OF EXTENSION

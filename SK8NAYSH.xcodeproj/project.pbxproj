@@ -14,6 +14,7 @@
 		79160D7925E44426006372C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79160D7725E44426006372C9 /* LaunchScreen.storyboard */; };
 		79160D8625E4446E006372C9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160D8525E4446E006372C9 /* Player.swift */; };
 		79160D8D25E4449A006372C9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79160D8C25E4449A006372C9 /* CloudKit.framework */; };
+		79160D9025E446DD006372C9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160D8F25E446DD006372C9 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		79160D8525E4446E006372C9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		79160D8925E44495006372C9 /* SK8NAYSH.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SK8NAYSH.entitlements; sourceTree = "<group>"; };
 		79160D8C25E4449A006372C9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		79160D8F25E446DD006372C9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +63,9 @@
 		79160D6B25E44424006372C9 /* SK8NAYSH */ = {
 			isa = PBXGroup;
 			children = (
-				79160D8925E44495006372C9 /* SK8NAYSH.entitlements */,
 				79160D8425E44467006372C9 /* Models */,
+				79160D9925E49507006372C9 /* Views */,
+				79160D8925E44495006372C9 /* SK8NAYSH.entitlements */,
 				79160D8125E44439006372C9 /* Resources */,
 			);
 			path = SK8NAYSH;
@@ -73,7 +76,6 @@
 			children = (
 				79160D6C25E44424006372C9 /* AppDelegate.swift */,
 				79160D6E25E44424006372C9 /* SceneDelegate.swift */,
-				79160D7225E44424006372C9 /* Main.storyboard */,
 				79160D7525E44426006372C9 /* Assets.xcassets */,
 				79160D7725E44426006372C9 /* LaunchScreen.storyboard */,
 				79160D7A25E44426006372C9 /* Info.plist */,
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				79160D8525E4446E006372C9 /* Player.swift */,
+				79160D8F25E446DD006372C9 /* Game.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,6 +98,14 @@
 				79160D8C25E4449A006372C9 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79160D9925E49507006372C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				79160D7225E44424006372C9 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 				79160D6D25E44424006372C9 /* AppDelegate.swift in Sources */,
 				79160D8625E4446E006372C9 /* Player.swift in Sources */,
 				79160D6F25E44424006372C9 /* SceneDelegate.swift in Sources */,
+				79160D9025E446DD006372C9 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
