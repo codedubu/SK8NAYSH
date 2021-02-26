@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AWu-yv-orq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SKATE-->
+        <scene sceneID="Oo0-AR-wFI">
+            <objects>
+                <viewController id="hI8-JI-LNY" customClass="GameViewController" customModule="SK8NAYSH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ow9-hK-j9B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6a-bS-RiQ">
+                                <rect key="frame" x="0.0" y="766" width="414" height="84"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yS6-Dw-KeE">
+                                        <rect key="frame" x="153" y="12.5" width="108" height="59"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <state key="normal" image="video" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="43"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recordButtonTapped:" destination="hI8-JI-LNY" eventType="touchUpInside" id="s0W-EG-IQV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="yS6-Dw-KeE" firstAttribute="centerY" secondItem="j6a-bS-RiQ" secondAttribute="centerY" id="58X-jd-icd"/>
+                                    <constraint firstItem="yS6-Dw-KeE" firstAttribute="width" secondItem="j6a-bS-RiQ" secondAttribute="width" multiplier="0.26087" id="Ayo-Zb-FYn"/>
+                                    <constraint firstItem="yS6-Dw-KeE" firstAttribute="centerX" secondItem="j6a-bS-RiQ" secondAttribute="centerX" id="PdN-w6-3KT"/>
+                                    <constraint firstItem="yS6-Dw-KeE" firstAttribute="height" secondItem="j6a-bS-RiQ" secondAttribute="height" multiplier="0.702381" id="mLU-UD-dZj"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wUf-EN-pkx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gameCell" rowHeight="237" id="DeG-2w-9hL">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="237"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DeG-2w-9hL" id="6Jc-Sq-MUn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="237"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="scv-kP-mha"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j6a-bS-RiQ" firstAttribute="height" secondItem="Ow9-hK-j9B" secondAttribute="height" multiplier="0.09375" id="3L1-Qc-EX9"/>
+                            <constraint firstItem="j6a-bS-RiQ" firstAttribute="centerX" secondItem="scv-kP-mha" secondAttribute="centerX" id="7jn-1E-CIG"/>
+                            <constraint firstItem="wUf-EN-pkx" firstAttribute="trailing" secondItem="scv-kP-mha" secondAttribute="trailing" id="D53-iU-oxp"/>
+                            <constraint firstItem="j6a-bS-RiQ" firstAttribute="top" secondItem="scv-kP-mha" secondAttribute="top" constant="678" id="Uhv-Ji-9aj"/>
+                            <constraint firstItem="j6a-bS-RiQ" firstAttribute="width" secondItem="Ow9-hK-j9B" secondAttribute="width" id="V7j-3J-kEI"/>
+                            <constraint firstItem="wUf-EN-pkx" firstAttribute="centerX" secondItem="scv-kP-mha" secondAttribute="centerX" id="Vyt-ys-5eH"/>
+                            <constraint firstItem="wUf-EN-pkx" firstAttribute="width" secondItem="Ow9-hK-j9B" secondAttribute="width" id="dx7-8C-Ru6"/>
+                            <constraint firstItem="wUf-EN-pkx" firstAttribute="top" secondItem="scv-kP-mha" secondAttribute="top" id="g29-Xu-fDS"/>
+                            <constraint firstItem="wUf-EN-pkx" firstAttribute="height" secondItem="Ow9-hK-j9B" secondAttribute="height" multiplier="0.757812" id="gPs-mt-Gvn"/>
+                            <constraint firstItem="wUf-EN-pkx" firstAttribute="leading" secondItem="scv-kP-mha" secondAttribute="leading" id="h2g-yI-bsv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SKATE" id="mKL-v9-fRv"/>
+                    <connections>
+                        <outlet property="gameListTableView" destination="wUf-EN-pkx" id="Ebf-TW-Hwj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yab-JE-hQp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286" y="117"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="pfc-BZ-1do">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="oCC-XY-tiA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1TO-Kw-ePU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CvQ-L4-xWH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AWu-yv-orq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ono-3e-7ld">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hI8-JI-LNY" kind="relationship" relationship="rootViewController" id="jaM-ZS-mrc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wh-ou-X2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-680" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="video" catalog="system" width="128" height="83"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

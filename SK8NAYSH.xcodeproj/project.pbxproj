@@ -15,6 +15,13 @@
 		79160D8625E4446E006372C9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160D8525E4446E006372C9 /* Player.swift */; };
 		79160D8D25E4449A006372C9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79160D8C25E4449A006372C9 /* CloudKit.framework */; };
 		79160D9025E446DD006372C9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160D8F25E446DD006372C9 /* Game.swift */; };
+		79160DA425E49641006372C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160DA325E49641006372C9 /* SignUpViewController.swift */; };
+		795B2CA125E5B6D300E75FD4 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795B2CA025E5B6D300E75FD4 /* PlayerController.swift */; };
+		795B2CA525E5B77D00E75FD4 /* CloudKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795B2CA425E5B77D00E75FD4 /* CloudKitError.swift */; };
+		795B2CA825E5B7E800E75FD4 /* PlayerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795B2CA725E5B7E800E75FD4 /* PlayerError.swift */; };
+		79AD23AA25E70A65003FDCD6 /* SkateGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD23A925E70A65003FDCD6 /* SkateGame.storyboard */; };
+		79AD23AD25E70D5B003FDCD6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD23AC25E70D5B003FDCD6 /* GameViewController.swift */; };
+		79AD23B025E721B3003FDCD6 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD23AF25E721B3003FDCD6 /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,13 @@
 		79160D8925E44495006372C9 /* SK8NAYSH.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SK8NAYSH.entitlements; sourceTree = "<group>"; };
 		79160D8C25E4449A006372C9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		79160D8F25E446DD006372C9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		79160DA325E49641006372C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		795B2CA025E5B6D300E75FD4 /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
+		795B2CA425E5B77D00E75FD4 /* CloudKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitError.swift; sourceTree = "<group>"; };
+		795B2CA725E5B7E800E75FD4 /* PlayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerError.swift; sourceTree = "<group>"; };
+		79AD23A925E70A65003FDCD6 /* SkateGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkateGame.storyboard; sourceTree = "<group>"; };
+		79AD23AC25E70D5B003FDCD6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		79AD23AF25E721B3003FDCD6 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				79160D8425E44467006372C9 /* Models */,
+				79160D9B25E495D9006372C9 /* Controllers */,
+				795B2CA325E5B76F00E75FD4 /* Helpers & Extensions */,
 				79160D9925E49507006372C9 /* Views */,
 				79160D8925E44495006372C9 /* SK8NAYSH.entitlements */,
 				79160D8125E44439006372C9 /* Resources */,
@@ -104,8 +120,45 @@
 			isa = PBXGroup;
 			children = (
 				79160D7225E44424006372C9 /* Main.storyboard */,
+				79AD23A925E70A65003FDCD6 /* SkateGame.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		79160D9B25E495D9006372C9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				795B2C9F25E5B6C400E75FD4 /* Model Controllers */,
+				79160D9C25E495E7006372C9 /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		79160D9C25E495E7006372C9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				79160DA325E49641006372C9 /* SignUpViewController.swift */,
+				79AD23AC25E70D5B003FDCD6 /* GameViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		795B2C9F25E5B6C400E75FD4 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				795B2CA025E5B6D300E75FD4 /* PlayerController.swift */,
+				79AD23AF25E721B3003FDCD6 /* GameController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		795B2CA325E5B76F00E75FD4 /* Helpers & Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				795B2CA425E5B77D00E75FD4 /* CloudKitError.swift */,
+				795B2CA725E5B7E800E75FD4 /* PlayerError.swift */,
+			);
+			path = "Helpers & Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79160D7925E44426006372C9 /* LaunchScreen.storyboard in Resources */,
+				79AD23AA25E70A65003FDCD6 /* SkateGame.storyboard in Resources */,
 				79160D7625E44426006372C9 /* Assets.xcassets in Resources */,
 				79160D7425E44424006372C9 /* Main.storyboard in Resources */,
 			);
@@ -179,9 +233,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				79160D6D25E44424006372C9 /* AppDelegate.swift in Sources */,
+				79AD23B025E721B3003FDCD6 /* GameController.swift in Sources */,
+				795B2CA525E5B77D00E75FD4 /* CloudKitError.swift in Sources */,
 				79160D8625E4446E006372C9 /* Player.swift in Sources */,
+				795B2CA825E5B7E800E75FD4 /* PlayerError.swift in Sources */,
+				79AD23AD25E70D5B003FDCD6 /* GameViewController.swift in Sources */,
+				795B2CA125E5B6D300E75FD4 /* PlayerController.swift in Sources */,
 				79160D6F25E44424006372C9 /* SceneDelegate.swift in Sources */,
 				79160D9025E446DD006372C9 /* Game.swift in Sources */,
+				79160DA425E49641006372C9 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,9 +20,8 @@ struct GameStrings {
     /// `Future Keys`
     
     // fileprivate static let SKATELettersReferenceKey = "SKATELettersReference"
-    // fileprivate static let fromPlayer: String?
-    // fileprivate static let toPlayer: String?
-    // fileprivate static let currentTurn: Bool
+    // fileprivate static let waitingPlayer: String?
+    // fileprivate static let currentPlayer: String?
 } // END OF STRUCT
 
 class Game {
@@ -33,16 +32,16 @@ class Game {
     var playerReference: CKRecord.Reference?
     
     var avData: Data?
-    var skateVideo: AVAsset? {
-        get {
-            guard let avData = self.avData else { return nil }
-            return avData.getAVAsset()
-        } set {
-            guard let session = AVAssetExportSession(asset: newValue!, presetName: AVAssetExportPresetHighestQuality),
-                  let url = session.outputURL else { return }
-            avData = try? Data(contentsOf: url)
-        }
-    }
+    var skateVideo: AVAsset?// {
+//        get {
+//            guard let avData = self.avData else { return nil }
+//            return avData.getAVAsset()
+//        } set {
+//            guard let session = AVAssetExportSession(asset: newValue!, presetName: AVAssetExportPresetHighestQuality),
+//                  let url = session.outputURL else { return }
+//            avData = try? Data(contentsOf: url)
+//        }
+//    }
     
     var avAsset: CKAsset {
         get {
