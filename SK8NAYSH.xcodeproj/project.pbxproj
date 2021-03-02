@@ -19,6 +19,8 @@
 		795B2CA125E5B6D300E75FD4 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795B2CA025E5B6D300E75FD4 /* PlayerController.swift */; };
 		795B2CA525E5B77D00E75FD4 /* CloudKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795B2CA425E5B77D00E75FD4 /* CloudKitError.swift */; };
 		795B2CA825E5B7E800E75FD4 /* PlayerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795B2CA725E5B7E800E75FD4 /* PlayerError.swift */; };
+		7992D15525ED58B000B40F20 /* GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992D15425ED58B000B40F20 /* GamesListViewController.swift */; };
+		7992D15A25EDA1F600B40F20 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992D15925EDA1F600B40F20 /* GameTableViewCell.swift */; };
 		79AD23AA25E70A65003FDCD6 /* SkateGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD23A925E70A65003FDCD6 /* SkateGame.storyboard */; };
 		79AD23AD25E70D5B003FDCD6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD23AC25E70D5B003FDCD6 /* GameViewController.swift */; };
 		79AD23B025E721B3003FDCD6 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD23AF25E721B3003FDCD6 /* GameController.swift */; };
@@ -40,6 +42,8 @@
 		795B2CA025E5B6D300E75FD4 /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		795B2CA425E5B77D00E75FD4 /* CloudKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitError.swift; sourceTree = "<group>"; };
 		795B2CA725E5B7E800E75FD4 /* PlayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerError.swift; sourceTree = "<group>"; };
+		7992D15425ED58B000B40F20 /* GamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListViewController.swift; sourceTree = "<group>"; };
+		7992D15925EDA1F600B40F20 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		79AD23A925E70A65003FDCD6 /* SkateGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkateGame.storyboard; sourceTree = "<group>"; };
 		79AD23AC25E70D5B003FDCD6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		79AD23AF25E721B3003FDCD6 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		79160D9925E49507006372C9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7992D15825EDA1DF00B40F20 /* Custom Cell */,
 				79160D7225E44424006372C9 /* Main.storyboard */,
 				79AD23A925E70A65003FDCD6 /* SkateGame.storyboard */,
 			);
@@ -139,6 +144,7 @@
 			children = (
 				79160DA325E49641006372C9 /* SignUpViewController.swift */,
 				79AD23AC25E70D5B003FDCD6 /* GameViewController.swift */,
+				7992D15425ED58B000B40F20 /* GamesListViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -159,6 +165,14 @@
 				795B2CA725E5B7E800E75FD4 /* PlayerError.swift */,
 			);
 			path = "Helpers & Extensions";
+			sourceTree = "<group>";
+		};
+		7992D15825EDA1DF00B40F20 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7992D15925EDA1F600B40F20 /* GameTableViewCell.swift */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,10 +252,12 @@
 				79160D8625E4446E006372C9 /* Player.swift in Sources */,
 				795B2CA825E5B7E800E75FD4 /* PlayerError.swift in Sources */,
 				79AD23AD25E70D5B003FDCD6 /* GameViewController.swift in Sources */,
+				7992D15525ED58B000B40F20 /* GamesListViewController.swift in Sources */,
 				795B2CA125E5B6D300E75FD4 /* PlayerController.swift in Sources */,
 				79160D6F25E44424006372C9 /* SceneDelegate.swift in Sources */,
 				79160D9025E446DD006372C9 /* Game.swift in Sources */,
 				79160DA425E49641006372C9 /* SignUpViewController.swift in Sources */,
+				7992D15A25EDA1F600B40F20 /* GameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

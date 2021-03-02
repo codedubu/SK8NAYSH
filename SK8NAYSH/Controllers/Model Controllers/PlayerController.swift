@@ -18,6 +18,8 @@ class PlayerController {
     func createPlayerWith(_ username: String, completion: @escaping(Result<Player?, PlayerError>) -> Void) {
         fetchApplePlayerReference { (result) in
             
+            print("hello world")
+            
             switch result {
             case .success(let reference):
                 guard let reference = reference else { return completion(.failure(.noPlayerLoggedIn)) }
@@ -26,11 +28,14 @@ class PlayerController {
                 
                 let record = CKRecord(player: newPlayer)
                 
-                self.publicDB.save(record) { (record, error ) in
+                self.publicDB.save(record) { (record, error) in
                     
                     if let error = error {
+                        print("Error: \(error.localizedDescription) : \(error)")
                         return completion(.failure(.ckError(error)))
                     }
+                    
+                    print("got it")
                     
                     guard let record = record else { return completion(.failure(.unexpectedRecordsFound)) }
                     guard let savedPlayer = Player(ckRecord: record) else { return completion(.failure(.unableToUnwrap)) }
@@ -75,7 +80,7 @@ class PlayerController {
         }
     } // END OF FUNC
     
-     func fetchApplePlayerReference(completion: @escaping(Result<CKRecord.Reference?, PlayerError>) -> Void) {
+     private func fetchApplePlayerReference(completion: @escaping(Result<CKRecord.Reference?, PlayerError>) -> Void) {
         CKContainer.default().fetchUserRecordID { (recordID, error) in
             if let error = error {
                 completion(.failure(.ckError(error)))

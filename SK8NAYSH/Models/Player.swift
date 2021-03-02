@@ -91,7 +91,7 @@ extension CKRecord {
         setValuesForKeys([
             PlayerStrings.usernameKey : player.username,
             PlayerStrings.applePlayerReferenceKey : player.applePlayerReference,
-            PlayerStrings.photoAssetKey : player.photoAsset
+//            PlayerStrings.photoAssetKey : player.photoAsset
         ])
     }
 } // END OF EXTENSION

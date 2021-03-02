@@ -22,8 +22,8 @@ class SignUpViewController: UIViewController {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        createMockUser()
-//        fetchPlayer()
+//        createMockUser()
+        fetchPlayer()
         // setupViews
     }
     
@@ -82,23 +82,4 @@ class SignUpViewController: UIViewController {
             self.present(gameViewController, animated: true)
         }
     }
-    
-    func createMockUser() {
-        PlayerController.shared.fetchApplePlayerReference { (result) in
-            switch result {
-            case .success(let reference):
-                
-                guard let reference = reference else { return }
-                
-                let mockPlayer = Player(username: "playerTest1", applePlayerReference: reference)
-            PlayerController.shared.currentPlayer = mockPlayer
-                self.presentSkateGameVC()
-            
-            case .failure(_):
-            print("oh no")
-            }
-        }
-    }
-    
-    
 } // END OF CLASS
