@@ -28,22 +28,22 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @objc func video(
-      _ videoPath: String,
-      didFinishSavingWithError error: Error?,
-      contextInfo info: AnyObject
+        _ videoPath: String,
+        didFinishSavingWithError error: Error?,
+        contextInfo info: AnyObject
     ) {
-      let title = (error == nil) ? "Success" : "Error"
-      let message = (error == nil) ? "Video was saved" : "Video failed to save"
-
-      let alert = UIAlertController(
-        title: title,
-        message: message,
-        preferredStyle: .alert)
-      alert.addAction(UIAlertAction(
-        title: "OK",
-        style: UIAlertAction.Style.cancel,
-        handler: nil))
-      present(alert, animated: true, completion: nil)
+        let title = (error == nil) ? "Success" : "Error"
+        let message = (error == nil) ? "Video was saved" : "Video failed to save"
+        
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        alert.addAction(UIAlertAction(
+                            title: "OK",
+                            style: UIAlertAction.Style.cancel,
+                            handler: nil))
+        present(alert, animated: true, completion: nil)
         
         print(" this is the \(videoPath)")
     }
@@ -64,13 +64,13 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     // MARK: - Helper Methods
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-//        dismiss(animated: true, completion: nil)
+        //        dismiss(animated: true, completion: nil)
         
         
         // uhhhh...maybe?
-//        if let pickedVideo = info[.mediaURL] as? AVAsset {
-//        }
-    
+        //        if let pickedVideo = info[.mediaURL] as? AVAsset {
+        //        }
+        
         
         guard let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String,
               mediaType == (kUTTypeMovie as String),
@@ -79,29 +79,30 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
               // 2
               let movieData = try? Data(contentsOf: url)
         
-        GameController.shared.createGame(with: <#T##String#>, video: <#T##AVAsset?#>, completion: <#T##(Result<String, CloudKitError>) -> Void#>)
+        // use movieData for video property?
+        //        GameController.shared.createGame(with: <#T##String#>, video: <#T##AVAsset?#>, completion: <#T##(Result<String, CloudKitError>) -> Void#>)
         
         else { return }
-
         
-//              UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(url.path)
+        
+        //              UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(url.path)
         print("media was hit")
         
         // 3
-//        UISaveVideoAtPathToSavedPhotosAlbum(
-//          url.path,
-//          self,
-//          #selector(video(_:didFinishSavingWithError:contextInfo:)),
-//          nil)
-      }
-        
-//        let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
-//
-//        if let videoURL = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.mediaURL)] as? URL {
-//
-//            print("selected video!")
-//        }
-//        dismiss(animated: true, completion: nil)
+        //        UISaveVideoAtPathToSavedPhotosAlbum(
+        //          url.path,
+        //          self,
+        //          #selector(video(_:didFinishSavingWithError:contextInfo:)),
+        //          nil)
+    }
+    
+    //        let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+    //
+    //        if let videoURL = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.mediaURL)] as? URL {
+    //
+    //            print("selected video!")
+    //        }
+    //        dismiss(animated: true, completion: nil)
     
     
 } // END OF CLASS
