@@ -74,7 +74,7 @@ class GameController {
                 let fetchedGames = records.compactMap { Game(ckRecord:  $0) }
                 self.games = fetchedGames
                 
-                completion(.success("Sucessfull fetched all hypes."))
+                completion(.success("Sucessfull fetched all games."))
                 
             }
         }

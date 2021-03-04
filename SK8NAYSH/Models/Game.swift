@@ -32,16 +32,17 @@ class Game {
     var playerReference: CKRecord.Reference?
     
     var avData: Data?
-    var skateVideo: AVAsset?// {
-//        get {
-//            guard let avData = self.avData else { return nil }
-//            return avData.getAVAsset()
-//        } set {
-//            guard let session = AVAssetExportSession(asset: newValue!, presetName: AVAssetExportPresetHighestQuality),
-//                  let url = session.outputURL else { return }
-//            avData = try? Data(contentsOf: url)
-//        }
-//    }
+    var skateVideo: AVAsset? {
+        get {
+            guard let avData = self.avData else { return nil }
+            return avData.getAVAsset()
+            
+        } set {
+            guard let session = AVAssetExportSession(asset: newValue!, presetName: AVAssetExportPresetHighestQuality),
+                  let url = session.outputURL else { return }
+            avData = try? Data(contentsOf: url)
+        }
+    }
     
     var avAsset: CKAsset {
         get {
