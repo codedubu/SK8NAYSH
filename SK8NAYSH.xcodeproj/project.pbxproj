@@ -25,6 +25,7 @@
 		79AD23AA25E70A65003FDCD6 /* SkateGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD23A925E70A65003FDCD6 /* SkateGame.storyboard */; };
 		79AD23AD25E70D5B003FDCD6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD23AC25E70D5B003FDCD6 /* GameViewController.swift */; };
 		79AD23B025E721B3003FDCD6 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD23AF25E721B3003FDCD6 /* GameController.swift */; };
+		79EE52D025F1690F00118E0F /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE52CF25F1690F00118E0F /* FriendsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		79AD23A925E70A65003FDCD6 /* SkateGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkateGame.storyboard; sourceTree = "<group>"; };
 		79AD23AC25E70D5B003FDCD6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		79AD23AF25E721B3003FDCD6 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		79EE52CF25F1690F00118E0F /* FriendsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				79160DA325E49641006372C9 /* SignUpViewController.swift */,
 				79AD23AC25E70D5B003FDCD6 /* GameViewController.swift */,
 				7992D15425ED58B000B40F20 /* GamesListViewController.swift */,
+				79EE52CF25F1690F00118E0F /* FriendsListViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				79160D6D25E44424006372C9 /* AppDelegate.swift in Sources */,
 				79AD23B025E721B3003FDCD6 /* GameController.swift in Sources */,
+				79EE52D025F1690F00118E0F /* FriendsListViewController.swift in Sources */,
 				795B2CA525E5B77D00E75FD4 /* CloudKitError.swift in Sources */,
 				79160D8625E4446E006372C9 /* Player.swift in Sources */,
 				795B2CA825E5B7E800E75FD4 /* PlayerError.swift in Sources */,

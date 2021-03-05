@@ -18,15 +18,17 @@ class GameController {
     let publicDB = CKContainer.default().publicCloudDatabase
     
     // MARK: - Crud Methods
-    func createGame(with trickTitle: String, video: AVAsset?, completion: @escaping (Result<String, CloudKitError>) -> Void ) {
+    func createGame(with trickTitle: String, url: URL, completion: @escaping (Result<String, CloudKitError>) -> Void ) {
         
         guard let currentPlayer = PlayerController.shared.currentPlayer else { return completion(.failure(.noUserLoggedIn)) }
         
         let reference = CKRecord.Reference.init(recordID: currentPlayer.recordID, action: .deleteSelf)
         
-        let newGame = Game(trickName: trickTitle, timestamp: Date(), playerReference: reference, skateVideo: video)
+        let newGame = Game(trickName: trickTitle, timestamp: Date(), playerReference: reference, url: url)
         
-        let gameRecord = CKRecord(game: newGame)
+        self.games.append(newGame)
+        
+        let gameRecord = CKRecord()
         
         self.publicDB.save(gameRecord) { (record, error) in
             DispatchQueue.main.async {
