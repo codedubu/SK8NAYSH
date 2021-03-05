@@ -12,19 +12,15 @@ struct PlayerStrings {
     static let recordTypeKey = "Player"
     static let applePlayerReferenceKey = "applePlayerReference"
     fileprivate static let usernameKey = "username"
-    
-    fileprivate static let friendsListKey = "friendsList"
-    fileprivate static let blockedListKey = "blockedList"
-    
+//    fileprivate static let friendsListKey = "friendsList"
+//    fileprivate static let blockedListKey = "blockedList"
     fileprivate static let photoAssetKey = "photoAsset"
 } // END OF STRUCT
 
 class Player {
     var username: String
-    
-    var friendsList: [String]
-    var blockedList: [String]
-    
+//    var friendsList: [String]
+//    var blockedList: [String]
     var recordID: CKRecord.ID
     var applePlayerReference: CKRecord.Reference
     var photoData: Data?
@@ -59,8 +55,8 @@ class Player {
         self.username = username
         self.recordID = recordID
         self.applePlayerReference = applePlayerReference
-        self.friendsList = friendsList
-        self.blockedList = blockedList
+//        self.friendsList = friendsList
+//        self.blockedList = blockedList
         self.profilePhoto = profilePhoto
 
     }
@@ -71,9 +67,9 @@ class Player {
 extension Player {
     convenience init?(ckRecord: CKRecord) {
         guard let username = ckRecord[PlayerStrings.usernameKey] as? String,
-              let applePlayerReference = ckRecord[PlayerStrings.applePlayerReferenceKey] as? CKRecord.Reference,
-              let friendsList = ckRecord[PlayerStrings.friendsListKey] as? [String],
-              let blockedList = ckRecord[PlayerStrings.blockedListKey] as? [String] else { return nil }
+              let applePlayerReference = ckRecord[PlayerStrings.applePlayerReferenceKey] as? CKRecord.Reference else { return nil }
+//              let friendsList = ckRecord[PlayerStrings.friendsListKey] as? [String],
+//              let blockedList = ckRecord[PlayerStrings.blockedListKey] as? [String] else { return nil }
              
         
         var foundPhoto: UIImage?
@@ -87,7 +83,7 @@ extension Player {
             }
         }
         
-        self.init(username: username, friendsList: friendsList, blockedList: blockedList, recordID: ckRecord.recordID, applePlayerReference: applePlayerReference, profilePhoto: foundPhoto)
+        self.init(username: username, /*friendsList: friendsList, blockedList: blockedList,*/ recordID: ckRecord.recordID, applePlayerReference: applePlayerReference, profilePhoto: foundPhoto)
     }
 } // END OF EXTENSION
 
@@ -105,9 +101,9 @@ extension CKRecord {
         
         setValuesForKeys([
             PlayerStrings.usernameKey : player.username,
-            PlayerStrings.applePlayerReferenceKey : player.applePlayerReference,
-            PlayerStrings.friendsListKey : player.friendsList,
-            PlayerStrings.blockedListKey : player.blockedList
+            PlayerStrings.applePlayerReferenceKey : player.applePlayerReference
+//            PlayerStrings.friendsListKey : player.friendsList,
+//            PlayerStrings.blockedListKey : player.blockedList
 //            PlayerStrings.photoAssetKey : player.photoAsset
         ])
     }

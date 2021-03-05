@@ -36,7 +36,6 @@ class Game {
         }
     }
     
-    
     init(trickName: String, timestamp: Date = Date(),recordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString), playerReference: CKRecord.Reference?, url: URL) {
         self.trickName = trickName
         self.timestamp = timestamp
@@ -44,11 +43,6 @@ class Game {
         self.playerReference = playerReference
         self.url = url
     }
-
-    
-    
-    // MARK: - Extensions
- 
     
     init?(ckRecord: CKRecord) {
         guard let trickName = ckRecord[GameStrings.trickNameKey] as? String,
@@ -63,8 +57,25 @@ class Game {
         self.videoAsset = videoAsset
         
     }
+} // end of extension
 
-}
+extension CKRecord {
+    convenience init(game: Game) {
+        self.init(recordType: GameStrings.recordTypeKey, recordID: game.recordID)
+        self.setValuesForKeys([
+            GameStrings.trickNameKey : game.trickName,
+            GameStrings.timestampKey : game.timestamp,
+        ])
+        
+        if let reference = game.playerReference {
+            setValue(reference, forKey: GameStrings.playerReferenceKey)
+        }
+        
+        if game.url != nil {
+            setValue(game.url, forKey: GameStrings.videoAssetKey)
+        }
+    }
+} // end of extension
 
 /// `Future Keys`
 

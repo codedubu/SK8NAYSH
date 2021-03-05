@@ -64,46 +64,17 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     // MARK: - Helper Methods
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        //        dismiss(animated: true, completion: nil)
-        
-        
-        // uhhhh...maybe?
-        //        if let pickedVideo = info[.mediaURL] as? AVAsset {
-        //        }
-        
+        dismiss(animated: true, completion: nil)
         
         guard let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String,
               mediaType == (kUTTypeMovie as String),
               // 1
               let url = info[UIImagePickerController.InfoKey.mediaURL] as? URL,
               // 2
-              let movieData = try? Data(contentsOf: url)
+              let movieData = try? Data(contentsOf: url) else { return }
         
-        // use movieData for video property?
-        //        GameController.shared.createGame(with: <#T##String#>, video: <#T##AVAsset?#>, completion: <#T##(Result<String, CloudKitError>) -> Void#>)
-        
-        else { return }
-        
-        
-        //              UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(url.path)
-        print("media was hit")
-        
-        // 3
-        //        UISaveVideoAtPathToSavedPhotosAlbum(
-        //          url.path,
-        //          self,
-        //          #selector(video(_:didFinishSavingWithError:contextInfo:)),
-        //          nil)
-    }
-    
-    //        let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
-    //
-    //        if let videoURL = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.mediaURL)] as? URL {
-    //
-    //            print("selected video!")
-    //        }
-    //        dismiss(animated: true, completion: nil)
-    
+                
+            }
     
 } // END OF CLASS
 // MARK: - Extensions

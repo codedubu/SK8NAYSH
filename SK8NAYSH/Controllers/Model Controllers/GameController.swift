@@ -26,9 +26,9 @@ class GameController {
         
         let newGame = Game(trickName: trickTitle, timestamp: Date(), playerReference: reference, url: url)
         
-        self.games.append(newGame)
+        let gameRecord = CKRecord(game: newGame)
         
-        let gameRecord = CKRecord()
+    
         
         self.publicDB.save(gameRecord) { (record, error) in
             DispatchQueue.main.async {
