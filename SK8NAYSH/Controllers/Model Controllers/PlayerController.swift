@@ -24,7 +24,7 @@ class PlayerController {
             case .success(let reference):
                 guard let reference = reference else { return completion(.failure(.noPlayerLoggedIn)) }
                 
-                let newPlayer = Player(username: username, applePlayerReference: reference)
+                let newPlayer = Player(username: username, friendsList: nil, friendReferences: nil, applePlayerReference: reference)
                 
                 let record = CKRecord(player: newPlayer)
                 
@@ -49,7 +49,7 @@ class PlayerController {
             }
 
         }
-    } // END OF FUNC
+    }
     
     func fetchPlayer(completion: @escaping(Result<Player?, PlayerError>) -> Void) {
         
@@ -78,7 +78,7 @@ class PlayerController {
                 print("There was an error while fetching the player: \(error.errorDescription)")
             }
         }
-    } // END OF FUNC
+    }
     
      private func fetchApplePlayerReference(completion: @escaping(Result<CKRecord.Reference?, PlayerError>) -> Void) {
         CKContainer.default().fetchUserRecordID { (recordID, error) in

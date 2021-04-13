@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameTableViewCell: UITableViewCell {
+class TrickTableViewCell: UITableViewCell {
 
     // MARK: - Outlets
     @IBOutlet weak var playerTwoImageView: UIImageView!
@@ -16,7 +16,7 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var playerOneTrickLabel: UILabel!
     
     // MARK: - Properties
-    var game: Game? {
+    var trick: Trick? {
         didSet {
             updateViews()
         }
@@ -29,7 +29,7 @@ class GameTableViewCell: UITableViewCell {
     
     // MARK: - Helper Methods
     func updateViews() {
-        guard let game = game else { return }
+        guard let trick = trick else { return }
         
     }
 

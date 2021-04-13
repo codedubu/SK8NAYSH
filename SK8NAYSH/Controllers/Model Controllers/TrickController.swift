@@ -10,27 +10,24 @@ import AVKit
 import MobileCoreServices
 
 
-class GameController {
+class TrickController {
     // MARK: - Properties
-    static let shared = GameController()
-    
-    var games: [Game] = []
+    static let shared = TrickController()
+    var tricks: [Trick] = []
     let publicDB = CKContainer.default().publicCloudDatabase
     
-    // MARK: - Crud Methods
-    func createGame(with trickTitle: String, url: URL, completion: @escaping (Result<String, CloudKitError>) -> Void ) {
+    // MARK: - CRUD Methods
+    func createTrick(with trickTitle: String, video: AVAsset?, dataURL: String?, completion: @escaping (Result<String, CloudKitError>) -> Void ) {
         
         guard let currentPlayer = PlayerController.shared.currentPlayer else { return completion(.failure(.noUserLoggedIn)) }
         
         let reference = CKRecord.Reference.init(recordID: currentPlayer.recordID, action: .deleteSelf)
         
-        let newGame = Game(trickName: trickTitle, timestamp: Date(), playerReference: reference, url: url)
+        let newTrick = Trick(trickName: trickTitle, timestamp: Date(), playerReference: reference, dataURL: dataURL, skateVideo: video)
         
-        let gameRecord = CKRecord(game: newGame)
+        let trickRecord = CKRecord(trick: newTrick)
         
-    
-        
-        self.publicDB.save(gameRecord) { (record, error) in
+        self.publicDB.save(trickRecord) { (record, error) in
             DispatchQueue.main.async {
                 if let error = error {
                     print("""
@@ -44,19 +41,19 @@ class GameController {
                 }
                 
                 guard let record = record,
-                      let savedGame = Game(ckRecord: record) else { return completion(.failure(.unableToUnwrap)) }
+                      let savedGame = Trick(ckRecord: record) else { return completion(.failure(.unableToUnwrap)) }
                 
-                self.games.append(savedGame)
+                self.tricks.append(savedGame)
                 completion(.success("Succesfully saved a Game"))
-           
+                
             }
         }
     }
     
-    func fetchAllGames(completion: @escaping (Result<String, CloudKitError>) -> Void) {
+    func fetchAllTricks(completion: @escaping (Result<String, CloudKitError>) -> Void) {
         
-        let fetchallPredicate = NSPredicate(value: true)
-        let query = CKQuery(recordType: GameStrings.recordTypeKey, predicate: fetchallPredicate)
+        let fetchAllPredicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: TrickStrings.recordTypeKey, predicate: fetchAllPredicate)
         
         publicDB.perform(query, inZoneWith: nil) { (records, error) in
             DispatchQueue.main.async {
@@ -73,10 +70,10 @@ class GameController {
                 
                 guard let records = records else { return completion(.failure(.unableToUnwrap)) }
                 
-                let fetchedGames = records.compactMap { Game(ckRecord:  $0) }
-                self.games = fetchedGames
-                
-                completion(.success("Sucessfull fetched all games."))
+                let fetchedTricks = records.compactMap { Trick(ckRecord:  $0) }
+                self.tricks = fetchedTricks
+                print(self.tricks.count)
+                completion(.success("Sucessfull fetched all tricks."))
                 
             }
         }

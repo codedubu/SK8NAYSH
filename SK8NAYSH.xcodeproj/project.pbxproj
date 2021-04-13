@@ -14,18 +14,22 @@
 		79160D7925E44426006372C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79160D7725E44426006372C9 /* LaunchScreen.storyboard */; };
 		79160D8625E4446E006372C9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160D8525E4446E006372C9 /* Player.swift */; };
 		79160D8D25E4449A006372C9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79160D8C25E4449A006372C9 /* CloudKit.framework */; };
-		79160D9025E446DD006372C9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160D8F25E446DD006372C9 /* Game.swift */; };
+		79160D9025E446DD006372C9 /* Trick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160D8F25E446DD006372C9 /* Trick.swift */; };
 		79160DA425E49641006372C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79160DA325E49641006372C9 /* SignUpViewController.swift */; };
 		795B2CA125E5B6D300E75FD4 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795B2CA025E5B6D300E75FD4 /* PlayerController.swift */; };
 		795B2CA525E5B77D00E75FD4 /* CloudKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795B2CA425E5B77D00E75FD4 /* CloudKitError.swift */; };
 		795B2CA825E5B7E800E75FD4 /* PlayerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795B2CA725E5B7E800E75FD4 /* PlayerError.swift */; };
 		7992D15525ED58B000B40F20 /* GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992D15425ED58B000B40F20 /* GamesListViewController.swift */; };
-		7992D15A25EDA1F600B40F20 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992D15925EDA1F600B40F20 /* GameTableViewCell.swift */; };
+		7992D15A25EDA1F600B40F20 /* TrickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992D15925EDA1F600B40F20 /* TrickTableViewCell.swift */; };
 		7992D16025EF040B00B40F20 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992D15F25EF040B00B40F20 /* VideoHelper.swift */; };
 		79AD23AA25E70A65003FDCD6 /* SkateGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD23A925E70A65003FDCD6 /* SkateGame.storyboard */; };
-		79AD23AD25E70D5B003FDCD6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD23AC25E70D5B003FDCD6 /* GameViewController.swift */; };
-		79AD23B025E721B3003FDCD6 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD23AF25E721B3003FDCD6 /* GameController.swift */; };
+		79AD23AD25E70D5B003FDCD6 /* TrickListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD23AC25E70D5B003FDCD6 /* TrickListViewController.swift */; };
+		79AD23B025E721B3003FDCD6 /* TrickController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD23AF25E721B3003FDCD6 /* TrickController.swift */; };
+		79D098AE25F5A52200631057 /* SkateVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D098AD25F5A52200631057 /* SkateVideoPlayerViewController.swift */; };
 		79EE52D025F1690F00118E0F /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE52CF25F1690F00118E0F /* FriendsListViewController.swift */; };
+		79EE530825F2A64600118E0F /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE530725F2A64600118E0F /* Friend.swift */; };
+		79EE530D25F2AB5E00118E0F /* FriendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE530C25F2AB5E00118E0F /* FriendError.swift */; };
+		79EE531025F2ACD900118E0F /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE530F25F2ACD900118E0F /* FriendController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,18 +43,22 @@
 		79160D8525E4446E006372C9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		79160D8925E44495006372C9 /* SK8NAYSH.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SK8NAYSH.entitlements; sourceTree = "<group>"; };
 		79160D8C25E4449A006372C9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		79160D8F25E446DD006372C9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		79160D8F25E446DD006372C9 /* Trick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trick.swift; sourceTree = "<group>"; };
 		79160DA325E49641006372C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		795B2CA025E5B6D300E75FD4 /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		795B2CA425E5B77D00E75FD4 /* CloudKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitError.swift; sourceTree = "<group>"; };
 		795B2CA725E5B7E800E75FD4 /* PlayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerError.swift; sourceTree = "<group>"; };
 		7992D15425ED58B000B40F20 /* GamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListViewController.swift; sourceTree = "<group>"; };
-		7992D15925EDA1F600B40F20 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		7992D15925EDA1F600B40F20 /* TrickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickTableViewCell.swift; sourceTree = "<group>"; };
 		7992D15F25EF040B00B40F20 /* VideoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
 		79AD23A925E70A65003FDCD6 /* SkateGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkateGame.storyboard; sourceTree = "<group>"; };
-		79AD23AC25E70D5B003FDCD6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		79AD23AF25E721B3003FDCD6 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		79AD23AC25E70D5B003FDCD6 /* TrickListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickListViewController.swift; sourceTree = "<group>"; };
+		79AD23AF25E721B3003FDCD6 /* TrickController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickController.swift; sourceTree = "<group>"; };
+		79D098AD25F5A52200631057 /* SkateVideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateVideoPlayerViewController.swift; sourceTree = "<group>"; };
 		79EE52CF25F1690F00118E0F /* FriendsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
+		79EE530725F2A64600118E0F /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		79EE530C25F2AB5E00118E0F /* FriendError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendError.swift; sourceTree = "<group>"; };
+		79EE530F25F2ACD900118E0F /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +93,6 @@
 		79160D6B25E44424006372C9 /* SK8NAYSH */ = {
 			isa = PBXGroup;
 			children = (
-				7992D15E25EF03F900B40F20 /* Helpers */,
 				79160D8425E44467006372C9 /* Models */,
 				79160D9B25E495D9006372C9 /* Controllers */,
 				795B2CA325E5B76F00E75FD4 /* Helpers & Extensions */,
@@ -112,7 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				79160D8525E4446E006372C9 /* Player.swift */,
-				79160D8F25E446DD006372C9 /* Game.swift */,
+				79160D8F25E446DD006372C9 /* Trick.swift */,
+				79EE530725F2A64600118E0F /* Friend.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,9 +156,10 @@
 			isa = PBXGroup;
 			children = (
 				79160DA325E49641006372C9 /* SignUpViewController.swift */,
-				79AD23AC25E70D5B003FDCD6 /* GameViewController.swift */,
+				79AD23AC25E70D5B003FDCD6 /* TrickListViewController.swift */,
 				7992D15425ED58B000B40F20 /* GamesListViewController.swift */,
 				79EE52CF25F1690F00118E0F /* FriendsListViewController.swift */,
+				79D098AD25F5A52200631057 /* SkateVideoPlayerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -159,7 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				795B2CA025E5B6D300E75FD4 /* PlayerController.swift */,
-				79AD23AF25E721B3003FDCD6 /* GameController.swift */,
+				79AD23AF25E721B3003FDCD6 /* TrickController.swift */,
+				79EE530F25F2ACD900118E0F /* FriendController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -169,6 +179,8 @@
 			children = (
 				795B2CA425E5B77D00E75FD4 /* CloudKitError.swift */,
 				795B2CA725E5B7E800E75FD4 /* PlayerError.swift */,
+				79EE530C25F2AB5E00118E0F /* FriendError.swift */,
+				7992D15E25EF03F900B40F20 /* Video Helpers */,
 			);
 			path = "Helpers & Extensions";
 			sourceTree = "<group>";
@@ -176,17 +188,17 @@
 		7992D15825EDA1DF00B40F20 /* Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
-				7992D15925EDA1F600B40F20 /* GameTableViewCell.swift */,
+				7992D15925EDA1F600B40F20 /* TrickTableViewCell.swift */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
-		7992D15E25EF03F900B40F20 /* Helpers */ = {
+		7992D15E25EF03F900B40F20 /* Video Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				7992D15F25EF040B00B40F20 /* VideoHelper.swift */,
 			);
-			path = Helpers;
+			path = "Video Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,20 +272,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D098AE25F5A52200631057 /* SkateVideoPlayerViewController.swift in Sources */,
 				79160D6D25E44424006372C9 /* AppDelegate.swift in Sources */,
-				79AD23B025E721B3003FDCD6 /* GameController.swift in Sources */,
+				79AD23B025E721B3003FDCD6 /* TrickController.swift in Sources */,
 				79EE52D025F1690F00118E0F /* FriendsListViewController.swift in Sources */,
 				795B2CA525E5B77D00E75FD4 /* CloudKitError.swift in Sources */,
 				79160D8625E4446E006372C9 /* Player.swift in Sources */,
 				795B2CA825E5B7E800E75FD4 /* PlayerError.swift in Sources */,
-				79AD23AD25E70D5B003FDCD6 /* GameViewController.swift in Sources */,
+				79AD23AD25E70D5B003FDCD6 /* TrickListViewController.swift in Sources */,
 				7992D15525ED58B000B40F20 /* GamesListViewController.swift in Sources */,
+				79EE531025F2ACD900118E0F /* FriendController.swift in Sources */,
 				795B2CA125E5B6D300E75FD4 /* PlayerController.swift in Sources */,
 				79160D6F25E44424006372C9 /* SceneDelegate.swift in Sources */,
-				79160D9025E446DD006372C9 /* Game.swift in Sources */,
+				79160D9025E446DD006372C9 /* Trick.swift in Sources */,
 				79160DA425E49641006372C9 /* SignUpViewController.swift in Sources */,
+				79EE530825F2A64600118E0F /* Friend.swift in Sources */,
 				7992D16025EF040B00B40F20 /* VideoHelper.swift in Sources */,
-				7992D15A25EDA1F600B40F20 /* GameTableViewCell.swift in Sources */,
+				79EE530D25F2AB5E00118E0F /* FriendError.swift in Sources */,
+				7992D15A25EDA1F600B40F20 /* TrickTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

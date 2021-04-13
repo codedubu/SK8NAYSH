@@ -36,14 +36,10 @@ extension FriendsListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath)
-        
-       // let friend = //PlayerController.shared.friends[indexPath.Row]
-        
+                
             // cell.textLabel?.text = friends.name
         
         return cell
     }
-    
-    
     
 } // END OF EXTENSION

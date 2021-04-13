@@ -22,9 +22,7 @@ class SignUpViewController: UIViewController {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-//        createMockUser()
         fetchPlayer()
-        // setupViews
     }
     
     // MARK: - Actions
@@ -33,7 +31,6 @@ class SignUpViewController: UIViewController {
         self.confirmPasswordTextField.isHidden = true
         
     }
-    
     
     @IBAction func signupButtonTapped(_ sender: Any) {
         isNewPlayer = true

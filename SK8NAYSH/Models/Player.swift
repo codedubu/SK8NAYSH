@@ -12,19 +12,17 @@ struct PlayerStrings {
     static let recordTypeKey = "Player"
     static let applePlayerReferenceKey = "applePlayerReference"
     fileprivate static let usernameKey = "username"
-//    fileprivate static let friendsListKey = "friendsList"
-//    fileprivate static let blockedListKey = "blockedList"
+    fileprivate static let friendReferencesKey = "friendReferences"
     fileprivate static let photoAssetKey = "photoAsset"
 } // END OF STRUCT
 
 class Player {
     var username: String
-//    var friendsList: [String]
-//    var blockedList: [String]
+    var friendsList: [Friend]?
+    var friendReferences: [CKRecord.Reference]?
     var recordID: CKRecord.ID
     var applePlayerReference: CKRecord.Reference
     var photoData: Data?
-    
     
     var profilePhoto: UIImage? {
         get {
@@ -51,27 +49,23 @@ class Player {
         }
     }
     
-    init(username: String, friendsList: [String] = [], blockedList: [String] = [], recordID: CKRecord.ID = CKRecord.ID.init(recordName:UUID().uuidString), applePlayerReference: CKRecord.Reference, profilePhoto: UIImage? = nil) {
+    init(username: String, friendsList: [Friend]?, friendReferences: [CKRecord.Reference]?,  recordID: CKRecord.ID = CKRecord.ID.init(recordName:UUID().uuidString), applePlayerReference: CKRecord.Reference, profilePhoto: UIImage? = nil) {
         self.username = username
+        self.friendsList = friendsList
+        self.friendReferences = friendReferences
         self.recordID = recordID
         self.applePlayerReference = applePlayerReference
-//        self.friendsList = friendsList
-//        self.blockedList = blockedList
         self.profilePhoto = profilePhoto
-
     }
-} // END OF CLASS
+    
+} // END OF STRUCT
 
 // MARK: - Extensions
-
 extension Player {
     convenience init?(ckRecord: CKRecord) {
         guard let username = ckRecord[PlayerStrings.usernameKey] as? String,
-              let applePlayerReference = ckRecord[PlayerStrings.applePlayerReferenceKey] as? CKRecord.Reference else { return nil }
-//              let friendsList = ckRecord[PlayerStrings.friendsListKey] as? [String],
-//              let blockedList = ckRecord[PlayerStrings.blockedListKey] as? [String] else { return nil }
+              let applePlayerReference = ckRecord[PlayerStrings.applePlayerReferenceKey] as? CKRecord.Reference  else { return nil }
              
-        
         var foundPhoto: UIImage?
         
         if let photoAsset = ckRecord[PlayerStrings.photoAssetKey] as? CKAsset {
@@ -83,17 +77,17 @@ extension Player {
             }
         }
         
-        self.init(username: username, /*friendsList: friendsList, blockedList: blockedList,*/ recordID: ckRecord.recordID, applePlayerReference: applePlayerReference, profilePhoto: foundPhoto)
+        let friendReferences = ckRecord[PlayerStrings.friendReferencesKey] as? [CKRecord.Reference]
+        
+        self.init(username: username, friendsList: nil, friendReferences: friendReferences,recordID: ckRecord.recordID, applePlayerReference: applePlayerReference, profilePhoto: foundPhoto)
     }
-} // END OF EXTENSION
+} // END OF STRUCT
 
 extension Player: Equatable {
-    
     static func == (lhs: Player, rhs: Player) -> Bool {
         lhs.recordID == rhs.recordID
     }
-    
-} // END OF EXTENSION
+} // END OF STRUCT
 
 extension CKRecord {
     convenience init(player: Player) {
@@ -102,9 +96,11 @@ extension CKRecord {
         setValuesForKeys([
             PlayerStrings.usernameKey : player.username,
             PlayerStrings.applePlayerReferenceKey : player.applePlayerReference
-//            PlayerStrings.friendsListKey : player.friendsList,
-//            PlayerStrings.blockedListKey : player.blockedList
 //            PlayerStrings.photoAssetKey : player.photoAsset
         ])
+        
+        if let friendReferences = player.friendReferences {
+            self.setValue(friendReferences, forKey: PlayerStrings.friendReferencesKey)
+        }
     }
-} // END OF EXTENSION
+} // END OF STRUCT
