@@ -18,7 +18,7 @@ struct PlayerStrings {
 
 class Player {
     var username: String
-    var friendsList: [Friend]?
+    var friends: [Friend]?
     var friendReferences: [CKRecord.Reference]?
     var recordID: CKRecord.ID
     var applePlayerReference: CKRecord.Reference
@@ -51,7 +51,7 @@ class Player {
     
     init(username: String, friendsList: [Friend]?, friendReferences: [CKRecord.Reference]?,  recordID: CKRecord.ID = CKRecord.ID.init(recordName:UUID().uuidString), applePlayerReference: CKRecord.Reference, profilePhoto: UIImage? = nil) {
         self.username = username
-        self.friendsList = friendsList
+        self.friends = friendsList
         self.friendReferences = friendReferences
         self.recordID = recordID
         self.applePlayerReference = applePlayerReference

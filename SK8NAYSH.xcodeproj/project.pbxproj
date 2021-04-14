@@ -22,6 +22,7 @@
 		7992D15525ED58B000B40F20 /* GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992D15425ED58B000B40F20 /* GamesListViewController.swift */; };
 		7992D15A25EDA1F600B40F20 /* TrickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992D15925EDA1F600B40F20 /* TrickTableViewCell.swift */; };
 		7992D16025EF040B00B40F20 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992D15F25EF040B00B40F20 /* VideoHelper.swift */; };
+		79AD0FFD26278681003A0275 /* FriendRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD0FFC26278681003A0275 /* FriendRequestTableViewCell.swift */; };
 		79AD23AA25E70A65003FDCD6 /* SkateGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD23A925E70A65003FDCD6 /* SkateGame.storyboard */; };
 		79AD23AD25E70D5B003FDCD6 /* TrickListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD23AC25E70D5B003FDCD6 /* TrickListViewController.swift */; };
 		79AD23B025E721B3003FDCD6 /* TrickController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AD23AF25E721B3003FDCD6 /* TrickController.swift */; };
@@ -51,6 +52,7 @@
 		7992D15425ED58B000B40F20 /* GamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListViewController.swift; sourceTree = "<group>"; };
 		7992D15925EDA1F600B40F20 /* TrickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickTableViewCell.swift; sourceTree = "<group>"; };
 		7992D15F25EF040B00B40F20 /* VideoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
+		79AD0FFC26278681003A0275 /* FriendRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestTableViewCell.swift; sourceTree = "<group>"; };
 		79AD23A925E70A65003FDCD6 /* SkateGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkateGame.storyboard; sourceTree = "<group>"; };
 		79AD23AC25E70D5B003FDCD6 /* TrickListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickListViewController.swift; sourceTree = "<group>"; };
 		79AD23AF25E721B3003FDCD6 /* TrickController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				7992D15925EDA1F600B40F20 /* TrickTableViewCell.swift */,
+				79AD0FFC26278681003A0275 /* FriendRequestTableViewCell.swift */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				79AD23B025E721B3003FDCD6 /* TrickController.swift in Sources */,
 				79EE52D025F1690F00118E0F /* FriendsListViewController.swift in Sources */,
 				795B2CA525E5B77D00E75FD4 /* CloudKitError.swift in Sources */,
+				79AD0FFD26278681003A0275 /* FriendRequestTableViewCell.swift in Sources */,
 				79160D8625E4446E006372C9 /* Player.swift in Sources */,
 				795B2CA825E5B7E800E75FD4 /* PlayerError.swift in Sources */,
 				79AD23AD25E70D5B003FDCD6 /* TrickListViewController.swift in Sources */,
