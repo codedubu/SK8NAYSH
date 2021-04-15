@@ -13,16 +13,44 @@ class FriendsListViewController: UIViewController {
     @IBOutlet weak var friendsListTableView: UITableView!
     
     // MARK: - Properties
-    
-    
+    var friendArray: [[Friend]] = [[], []]
     
     // MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.friendsListTableView.delegate = self
-        self.friendsListTableView.delegate = self
+        self.friendsListTableView.dataSource = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let currentPlayer = PlayerController.shared.currentPlayer else { return }
+        
+        let allRequestsPredicate = NSPredicate(format: "%K==%@", argumentArray: [FriendStrings.ownerPlayerReferenceKey, currentPlayer.recordID])
+        FriendController.shared.fetchRequestsForPlayer(predicate: allRequestsPredicate) { (result) in
+            switch result {
+            case .success(let friends):
+                currentPlayer.friends = friends
+                guard let friendArray = currentPlayer.friends else { return }
+                
+                self.friendArray = [[], []]
+                
+                for friend in friendArray {
+                    if !friend.accepted {
+                        self.friendArray[0].append(friend)
+                    } else {
+                        self.friendArray[1].append(friend)
+                    }
+                    DispatchQueue.main.async {
+                        self.friendsListTableView.reloadData()
+                    }
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
 } // end of class
